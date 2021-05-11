@@ -3,13 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>login</title>
+    <link rel="stylesheet" href="css/login.css">
   </head>
   <body>
     <form action="validar.php" method="post">
+      <div class="divFo">
+
+
       <h1>Sistema de login</h1>
-      <p>Usuario <input type="text" placeholder="Ingrese su nombre" name="usuario" > </p>
-      <p>Contraseña <input type="password" placeholder="Ingrese su contraseña" name="contraseña" > </p>
-      <input type="submit" name="" value="Ingresar">
+      <div class="divUser">
+     <label for="email" id="email">Usuario: <input type="text" placeholder="usuario@sistema.com"  id="email"> </label>
+    </div>
+     <div class="divFlex"></div>
+      <div class="divContraseña">
+
+    
+     <label for="contrasenia" id="contrasenia">Contraseña: <input type="password" placeholder="**********" name="contraseña" id="contraseña"> </label>
+     
+    </div>
+    <button class="button" type="submit">Ingresar</button>
+    </div>
     </form>
   </body>
 </html>
