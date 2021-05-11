@@ -3,14 +3,14 @@ body{
     background-color: rgb(253, 251, 251);
 }
 form{
- 
+
     font-family: 'Comfortaa', cursive;
     font-size: larger;
     margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .divFo{
@@ -28,7 +28,7 @@ form{
     display:flex;
 }
 .divContraseña{
-    
+
     margin-top: 20px;
     margin-bottom: 30px;
 }.divUser{
