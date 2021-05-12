@@ -9,11 +9,18 @@ $conexion=mysqli_connect("localhost","root","","academico");
 $consulta="SELECT*FROM usuario where Nom_usu='$usuario' and pass_usu='$contraseña' ";
 $resultado=mysqli_query($conexion,$consulta);
 
-$filas=mysqli_num_rows($resultado);
+$filas=mysqli_fetch_array($resultado);
+if($filas['fk_rol']==1){//administrador
+  header("location:administrador.php");
+}else
+if($filas['fk_rol']==2){//Docente
+  header("location:docente.php");
+}else
+if($filas['fk_rol']==3){
+  header("location:estudiante.php");
+}
 
-if($filas){
-  header("location:home.php");
-}else{
+else{
   ?>
   <?php
   include("index.php");
