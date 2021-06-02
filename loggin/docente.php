@@ -6,7 +6,7 @@ header("location:index.php");
 }
 $iduser=$_SESSION['usuario'];
 
-$sql="SELECT id_usu, Nom_usu FROM usuario WHERE id_usu = '$iduser' ";
+$sql="SELECT * FROM usuario WHERE id_usu = '$iduser' ";
 $resultado = $conexion->query($sql);
 $row = $resultado->fetch_assoc();
  ?>
@@ -19,14 +19,19 @@ $row = $resultado->fetch_assoc();
   </head>
   <body>
     <h1>Bienvenidos Docente</h1>
-    <?php
-    echo utf8_decode($row['id_usu']);
-    echo utf8_decode($row['Nom_usu']);
-    echo utf8_decode($row['pass_usu']);
-    echo utf8_decode($row['correo']);
-    echo utf8_decode($row['direccion']);
-    echo utf8_decode($row['telefono']);
-     ?>
+    <div class="container-table container-table--edit">
+      <div class="table__title"> Datos de usuario </div>
+      <div class="table__header"> Información </div>
+      <div class="table__header"> Operación </div>
+
+      <div class="table__item"> <?php echo utf8_decode($row['id_usu']); ?></div>
+      <div class="table__item"> <?php echo utf8_decode($row['Nom_usu']); ?></div>
+      <div class="table__item"> <?php echo utf8_decode($row['pass_usu']);  ?></div>
+      <div class="table__item"> <?php echo utf8_decode($row['correo']); ?></div>
+      <div class="table__item"> <?php echo utf8_decode($row['direccion']); ?></div>
+      <div class="table__item"> <?php echo utf8_decode($row['telefono']); ?></div>
+    </div>
+    <button type="button" name="editar"> <a href="edicion_docente.php?id=<?php echo $row["id_usu"]; ?>">Editar</a> </button>
     <button type="button" name="Cerrar Sesion "> <a href="cierre.php ">Cerrar Sesion</a> </button>
   </body>
 </html>
