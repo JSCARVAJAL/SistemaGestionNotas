@@ -6,7 +6,7 @@ $_SESSION['usuario']=$usuario;
 
 $conexion=mysqli_connect("localhost","root","","academico");
 
-$consulta="SELECT*FROM usuario where Nom_usu='$usuario' and pass_usu='$contraseña' ";
+$consulta="SELECT*FROM usuario where id_usu='$usuario' and pass_usu='$contraseña' ";
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_fetch_array($resultado);
