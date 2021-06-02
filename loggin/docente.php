@@ -16,22 +16,41 @@ $row = $resultado->fetch_assoc();
   <head>
     <meta charset="utf-8">
     <title>Home</title>
+    <link rel="stylesheet" href="css/estiloTabla.css">
   </head>
   <body>
-    <h1>Bienvenidos Docente</h1>
-    <div class="container-table container-table--edit">
-      <div class="table__title"> Datos de usuario </div>
-      <div class="table__header"> Información </div>
-      <div class="table__header"> Operación </div>
+   
+    <div class="container">
+     
+      <h1>Bienvenidos Docente</h1>
+      <table border="1">
+        <caption>Datos de usuario</caption>
+        <tbody>
+          <tr>
+            <td>Información</td>
+            <th><div class="table__item"> <?php echo utf8_decode($row['id_usu']); ?></div></th>
+            <th><div class="table__item"> <?php echo utf8_decode($row['Nom_usu']); ?></div></th>
+            <th><div class="table__item"> <?php echo utf8_decode($row['pass_usu']);  ?></div></th>
+            <th><div class="table__item"> <?php echo utf8_decode($row['correo']); ?></div></th>
+            <th><div class="table__item"> <?php echo utf8_decode($row['direccion']); ?></div></th>
+            <th><div class="table__item"> <?php echo utf8_decode($row['telefono']); ?></div></th>
+          </tr>
+          
+        </tbody>
+      </table>
 
-      <div class="table__item"> <?php echo utf8_decode($row['id_usu']); ?></div>
-      <div class="table__item"> <?php echo utf8_decode($row['Nom_usu']); ?></div>
-      <div class="table__item"> <?php echo utf8_decode($row['pass_usu']);  ?></div>
-      <div class="table__item"> <?php echo utf8_decode($row['correo']); ?></div>
-      <div class="table__item"> <?php echo utf8_decode($row['direccion']); ?></div>
-      <div class="table__item"> <?php echo utf8_decode($row['telefono']); ?></div>
-    </div>
-    <button type="button" name="editar"> <a href="edicion_docente.php?id=<?php echo $row["id_usu"]; ?>">Editar</a> </button>
-    <button type="button" name="Cerrar Sesion "> <a href="cierre.php ">Cerrar Sesion</a> </button>
+
+
+
+    
+   
+
+
+      <div class="divButtons">
+
+    <button class="buttons" type="button" name="editar"> <a style="text-decoration: none;" href="edicion_docente.php?id=<?php echo $row["id_usu"]; ?>">Editar</a> </button>
+    <button class="buttons" type="button" name="Cerrar Sesion "> <a style="text-decoration: none;" href="cierre.php ">Cerrar Sesion</a> </button>
+      </div>
+  </div>
   </body>
 </html>

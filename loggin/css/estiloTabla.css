@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+
+
+body{
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    
+    
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 300px;
+    width: auto;
+
+    border: 2px solid #ccc;
+    text-align: center;
+    box-shadow: 0 8px 20px 1px rgb(131, 129, 129);
+}.divButtons{
+    
+    margin-top: 85px;
+}.buttons{
+    border-style: none;
+    text-decoration: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(232, 228, 228);
+}.buttons:hover {
+    color: white;
+    border-style: none;
+    text-decoration: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(58, 38, 237);
+}.buttons:hover a{
+    color: white;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #999;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+    caption-side: top;
+ }
+ caption, td, th {
+    padding: 0.3em;
+ }
+ th, td {
+    border-bottom: 1px solid #999;
+    width: 25%;
+ }
+ caption {
+    font-weight: bold;
+    font-style: italic;
+ }

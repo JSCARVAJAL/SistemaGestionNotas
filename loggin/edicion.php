@@ -19,20 +19,52 @@ $usuarios="SELECT * FROM usuario WHERE id_usu='$id'";
   <head>
     <meta charset="utf-8">
     <title>Edicion</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/estiloTabla.css">
   </head>
   <body>
-    <form class="container-table container-table--edit" action="procesar-edicion.php" method="post">
-      <div class="table__title"> Datos de usuario </div>
-      <div class="table__header"> Información </div>
-      <div class="table__header"> Operación </div>
-      <input type="hidden" class="table__item" name="id_usu" value="<?php echo utf8_decode($row['id_usu']); ?>">
+    <form  action="procesar-edicion.php" method="post">
+      <div class="divAdmin">
+
+
+     
+      <div> Datos de usuario </div>
+      <div> Información </div>
+     
+    
+ 
+      <br><br><br><br>
+      
+      <label><a>ID: </a></label>
+      <input id="id_usu" type="hidden" class="table__item" name="id_usu" value="<?php echo utf8_decode($row['id_usu']); ?>">
+      
+    
+      <br><br>
+      <label><a>Nombre: </a></label>
       <input type="text" class="table_input" name="Nom_usu" value="<?php echo utf8_decode($row['Nom_usu']); ?>">
+      
+      <br><br><label><a>Contraseña: </a></label>
+      
       <input type="text" class="table_input" name="pass_usu" value="<?php echo utf8_decode($row['pass_usu']); ?>">
+      <br><br><label><a>Email: </a></label>
       <input type="text" class="table_input" name="correo" value="<?php echo utf8_decode($row['correo']); ?>">
+      <br><br><label><a>Dirección: </a></label>
       <input type="text" class="table_input" name="direccion" value="<?php echo utf8_decode($row['direccion']); ?>">
+      <br><br><label><a>Telefono: </a></label>
       <input type="text" class="table_input" name="telefono" value="<?php echo utf8_decode($row['telefono']); ?>">
-        <input type="submit" name="actulizar" value="Actualizar" class="container__submit container__submit--actulizar">
+      
+<div class="spaceButton">
+  <br><br><br><br>
+
+        <input  type="submit" name="actulizar" value="Actualizar" class="buttons">
+       
+    <button type="button" name="Volver"> <a href="estudiante.php">Volver</a> </button> </div>
     </form>
-    <button type="button" name="Volver"> <a href="estudiante.php">Volver</a> </button>
+
+
+
+
+
+
   </body>
 </html>

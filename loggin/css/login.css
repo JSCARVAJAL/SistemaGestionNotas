@@ -12,12 +12,20 @@ form{
     align-items: center;
 
 }
-
+.divAdmin{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 600px;
+    width: 650px;
+    border: 2px solid #ccc;
+    text-align: center;
+    box-shadow: 0 8px 20px 1px rgb(131, 129, 129);
+}
 .divFo{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     height: 300px;
-    width: 550px;
+    width: 450px;
 
     border: 2px solid #ccc;
     text-align: center;
@@ -53,6 +61,7 @@ form{
     font-family: 'Comfortaa', cursive;
     height: 40px;
         width: 100px;
+        border-style: none;
         border-radius: 5px;
         border-style:solid;
         border-color: #ccc;
